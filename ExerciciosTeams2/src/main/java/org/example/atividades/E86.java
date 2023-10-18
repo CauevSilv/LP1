@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 public class E86 {
-    public static void ex86Vet() {
+    public static void e86() {
         Random rng = new Random();
         int[] vetor = new int[10];
         
@@ -24,25 +24,5 @@ public class E86 {
         }
         System.out.println("Lista Final: " + Arrays.toString(vetor));
     }
-    
-    public static void ex86List() {
-        Random rng = new Random();
-        ArrayList<Integer> vetor = new ArrayList<>();
-        
-        for (int i = 0; i < 10; i++) {
-            vetor.add(rng.nextInt(51));
-        }
-        System.out.println("Lista Inicial: " + vetor.toString());
-        
-        for (int i = 0; i < vetor.size(); i++) {
-            for (int j = 1; j < vetor.size()-i; j++) {
-                if (vetor.get(j-1) > vetor.get(j)) {
-                    int aux = vetor.get(j-1);
-                    vetor.set(j-1, vetor.get(j));
-                    vetor.set(j, aux);
-                }
-            }
-        }
-        System.out.println("Lista Final: " + vetor.toString());
-    }
+
 }

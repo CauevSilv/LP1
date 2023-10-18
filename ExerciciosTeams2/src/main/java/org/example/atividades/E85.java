@@ -3,7 +3,7 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class E85 {
-    public static void ex85Vet() {
+    public static void e85() {
         Random rng = new Random();
         double tempMin = 0;
         double tempMax = 40;
@@ -28,40 +28,6 @@ public class E85 {
         
         for (int i = 0; i < temp.length; i++) {
             if (temp[i] < media) {
-                inferiorMedia++;
-            }
-        }
-        System.out.println("Menor temperatura: " + menor);
-        System.out.println("Maior temperatura: " + maior);
-        System.out.println("Temperatura media: " + media);
-        System.out.println("#Dias abaixo da media: " + inferiorMedia);
-    }
-    
-    public static void ex85List() {
-        Random rng = new Random();
-        double tempMin = 0;
-        double tempMax = 40;
-        double menor = 100;
-        double maior = 0;
-        double soma = 0;
-        ArrayList<Double> temp = new ArrayList<>();
-        
-        for (int i = 0; i < 365; i++) {
-            temp.add(rng.nextDouble(tempMax - tempMin) + tempMin);
-            if (temp.get(i) < menor) {
-                menor = temp.get(i);
-            }
-            if (temp.get(i)> maior) {
-                maior = temp.get(i);
-            }
-            soma+= temp.get(i);
-        }
-        
-        double media = soma/365;
-        int inferiorMedia = 0;
-        
-        for (int i = 0; i < temp.size(); i++) {
-            if (temp.get(i) < media) {
                 inferiorMedia++;
             }
         }

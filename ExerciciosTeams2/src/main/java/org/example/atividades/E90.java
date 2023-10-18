@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 
 public class E90 {
-    public static void ex90Vet() {
+    public static void e90() {
         Random rng = new Random();
         int[] lista = new int[30];
         Scanner sc = new Scanner(System.in);
@@ -21,28 +21,6 @@ public class E90 {
         
         for (int i = 0; i < lista.length; i++) {
             if (numero == lista[i]) {
-                numeroCount++;
-            }
-        }
-        System.out.println("O número " + numero + " aparece " + numeroCount + " vezes na lista");
-    }
-    
-    public static void ex90List() {
-        Random rng = new Random();
-        ArrayList<Integer> lista = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-        
-        while (lista.size() < 30) {
-            lista.add(rng.nextInt(30) + 1);
-        }
-        
-        System.out.println("Lista: " + lista.toString());
-        System.out.println("Digite um número para buscar na lista");
-        int numero = sc.nextInt();
-        int numeroCount = 0;
-        
-        for (int i = 0; i < lista.size(); i++) {
-            if (numero == lista.get(i)) {
                 numeroCount++;
             }
         }

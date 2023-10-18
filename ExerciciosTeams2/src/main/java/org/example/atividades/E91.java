@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Arrays;
 
 public class E91 {
-    public static void ex91Vet() {
+    public static void e91() {
         Random rng = new Random();
         int[] vet = new int[50];
         
